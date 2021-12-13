@@ -1,6 +1,6 @@
 import { ProjectModel } from '../proyecto/proyecto.js';
 import { InscriptionModel } from './inscripcion.js';
-import {UserModel} from "../usuario.js"
+import {UserModel} from "../usuario/usuario.js"
 
 const resolverInscripciones = {
   Inscripcion: {
