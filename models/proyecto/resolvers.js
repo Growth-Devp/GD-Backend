@@ -19,8 +19,10 @@ const resolversProyecto = {
   },
   Query: {
     Proyectos: async (parent, args, context) => {
-      const proyectos = await ProjectModel.find();
-      return proyectos;
+      if (context.userData){
+        const proyectos = await ProjectModel.find({lider: context.userData._id});
+        return proyectos;
+      }
     },
   },
   Mutation: {
